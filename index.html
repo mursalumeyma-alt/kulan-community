@@ -1,0 +1,341 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kulan | Community Events</title>
+
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- ===================== -->
+    <!-- Navigation -->
+    <!-- ===================== -->
+
+    <header>
+
+        <nav>
+
+            <h2>
+                <a href="index.html" class="logo">Kulan</a>
+            </h2>
+
+        <div class="search-box">
+    <input
+        type="text"
+        id="searchInput"
+        placeholder="Search events..."
+    >
+</div>
+
+           
+
+  <div class="nav-buttons">
+
+                <a href="about.html">About</a>
+
+                <a href="events.html">Events</a>
+
+                <a href="contact.html">Contact</a>
+
+                <a href="login.html">Log In</a>
+
+                <button onclick="location.href='signup.html'">
+                    Sign Up
+                </button>
+
+            </div>
+
+        </nav>
+
+    </header>
+
+    <!-- ===================== -->
+    <!-- Hero -->
+    <!-- ===================== -->
+
+    <section class="hero">
+
+        <div class="hero-text">
+
+            <h1>Find your community across Minnesota.</h1>
+
+            <p>
+                Discover technology, culture, food,
+                sports, family and outdoor events near you.
+            </p>
+
+          
+ <button class="join-kulan-btn">Join Kulan</button>
+
+       <div class="hero-images">
+
+    <img
+        src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?w=1200&auto=format&fit=crop&q=80"
+        alt="Community Event"
+    >
+
+    <img
+        src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?w=800&auto=format&fit=crop&q=80"
+        alt="People Meeting"
+    >
+
+</div>
+    </section>
+
+    <!-- ===================== -->
+    <!-- Featured Events -->
+    <!-- ===================== -->
+<section class="events" id="events">
+
+    <div class="section-header">
+        <h2>Featured Events</h2>
+        <a href="#events">View all</a>
+    </div>
+
+    <div class="event-grid" id="eventGrid"></div>
+
+</section>
+
+    <!-- ===================== -->
+    <!-- Online Events -->
+    <!-- ===================== -->
+
+    <section class="online-events">
+
+    <div class="section-header">
+        <h2>Online Events</h2>
+        <a href="#">View all</a>
+    </div>
+
+    <div class="online-grid" id="onlineGrid"></div>
+
+</section>
+        <!-- ===================== -->
+    <!-- Categories -->
+    <!-- ===================== -->
+<section class="categories">
+
+    <div class="section-header">
+        <h2>Explore Categories</h2>
+        <a href="#">View all</a>
+    </div>
+
+    <div class="category-grid">
+
+        <div class="category-card" data-category="All">
+            <span>🌍</span>
+            <h3>All</h3>
+        </div>
+
+        <div class="category-card" data-category="Technology">
+            <span>💻</span>
+            <h3>Technology</h3>
+        </div>
+
+        <div class="category-card" data-category="Business">
+            <span>💼</span>
+            <h3>Business</h3>
+        </div>
+
+        <div class="category-card" data-category="Career">
+            <span>📈</span>
+            <h3>Career</h3>
+        </div>
+
+        <div class="category-card" data-category="Culture">
+            <span>🎭</span>
+            <h3>Culture</h3>
+        </div>
+
+        <div class="category-card" data-category="Family">
+            <span>👨‍👩‍👧</span>
+            <h3>Family</h3>
+        </div>
+
+        <div class="category-card" data-category="Outdoors">
+            <span>🥾</span>
+            <h3>Outdoors</h3>
+        </div>
+
+        <div class="category-card" data-category="Photography">
+            <span>📷</span>
+            <h3>Photography</h3>
+        </div>
+
+        <div class="category-card" data-category="Wellness">
+            <span>🧘</span>
+            <h3>Wellness</h3>
+        </div>
+
+    </div>
+
+</section>
+    <!-- ===================== -->
+    <!-- Popular Cities -->
+    <!-- ===================== -->
+
+   <section class="cities">
+
+    <div class="section-header">
+        <h2>Popular Cities</h2>
+        <a href="#">View all</a>
+    </div>
+
+    <div class="city-grid" id="cityGrid"></div>
+
+</section>
+    <!-- ===================== -->
+    <!-- How Kulan Works -->
+    <!-- ===================== -->
+
+   <section class="how-it-works">
+
+    <div class="section-header">
+        <h2>How Kulan Works</h2>
+    </div>
+
+    <div class="steps-grid" id="stepsGrid"></div>
+
+</section>
+    <!-- ===================== -->
+    <!-- Community Stories -->
+    <!-- ===================== -->
+
+   <section class="stories">
+
+    <div class="section-header">
+        <h2>Community Stories</h2>
+        <a href="#">View all</a>
+    </div>
+
+    <div class="story-grid" id="storyGrid"></div>
+
+</section>
+        <!-- ===================== -->
+    <!-- Join Banner -->
+    <!-- ===================== -->
+
+    <section class="join-banner">
+
+        <div class="join-content">
+
+            <div>
+
+                <h2>Ready to meet your community?</h2>
+
+                <p>
+                    Join Kulan today and discover local events,
+                    meet new people, learn new skills, and
+                    build lasting friendships across Minnesota.
+                </p>
+
+            </div>
+
+            <button onclick="location.href='signup.html'">
+                Join Kulan
+            </button>
+
+        </div>
+
+    </section>
+
+    <!-- ===================== -->
+    <!-- Event Modal -->
+    <!-- ===================== -->
+
+    <div id="eventModal" class="modal">
+
+        <div class="modal-content">
+
+            <span class="close-modal">&times;</span>
+
+            <img id="modalImage" src="" alt="Event">
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalDate"></p>
+
+            <p id="modalLocation"></p>
+
+            <p id="modalGroup"></p>
+
+        </div>
+
+    </div>
+
+    <!-- ===================== -->
+    <!-- Footer -->
+    <!-- ===================== -->
+
+    <footer>
+
+        <div class="footer-container">
+
+            <div class="footer-column">
+
+                <h2>Kulan</h2>
+
+                <p>
+                    Bringing Minnesota communities together
+                    through local events, learning,
+                    and meaningful connections.
+                </p>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Explore</h3>
+
+                <ul>
+                    <li><a href="events.html">Events</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Community</h3>
+
+                <ul>
+                    <li><a href="#">Start a Group</a></li>
+                    <li><a href="#">Volunteer</a></li>
+                    <li><a href="#">Become a Host</a></li>
+                </ul>
+
+            </div>
+
+            <div class="footer-column">
+
+                <h3>Contact</h3>
+
+                <p>📍 Minneapolis, Minnesota</p>
+
+                <p>📧 hello@kulan.com</p>
+
+                <p>📞 (555) 123-4567</p>
+
+            </div>
+
+        </div>
+
+        <div class="footer-bottom">
+
+            <p>© 2026 Kulan. All rights reserved.</p>
+
+        </div>
+
+    </footer>
+
+    <!-- JavaScript -->
+
+    <script src="js/data.js"></script>
+    <script src="js/app.js"></script>
+
+</body>
+</html>
