@@ -1,27 +1,27 @@
 const eventGrid = document.getElementById("eventGrid");
-
 function renderEvents(eventList) {
     eventGrid.innerHTML = eventList.map(event => `
-       <div class="event-card" data-id="${event.title}">
+        <div class="event-card">
 
-    <img src="${event.image}" alt="${event.title}" class="event-image">
+            <img src="${event.image}" alt="${event.title}">
 
-    <span class="badge">FREE</span>
+            <span class="badge">FREE</span>
 
-    <h3>${event.title}</h3>
+            <h3>${event.title}</h3>
 
-    <p>${event.date}</p>
+            <p>${event.date}</p>
 
-    <p>${event.location}</p>
+            <p>${event.location}</p>
 
-    <small>${event.group}</small>
+            <small>${event.group}</small>
 
-   <button class="join-btn" data-title="${event.title}">
+           <button class="join-btn" onclick="location.href='signup.html'">
     Join Event
 </button>
-</div>
+        </div>
     `).join("");
 }
+
 
 renderEvents(events);
 const searchInput = document.getElementById("searchInput");
