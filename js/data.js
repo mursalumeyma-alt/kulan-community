@@ -149,26 +149,27 @@ const stories = [
     image: images.story2
   }
 ];
+
 const cities = [
   {
     name: "Minneapolis",
-    image: images.city1
+    image: "https://images.unsplash.com/photo-1519567241046-7f570eee3ce6?auto=format&fit=crop&w=800&q=80"
   },
   {
     name: "Saint Paul",
-    image: images.city2
+    image: "https://images.unsplash.com/photo-1449824913935-59a10b8d2000?auto=format&fit=crop&w=800&q=80"
   },
   {
     name: "Rochester",
-    image: images.city1
+    image: "https://images.unsplash.com/photo-1519501025264-65ba15a82390?auto=format&fit=crop&w=800&q=80"
   },
   {
     name: "Bloomington",
-    image: images.city2
+    image: "https://images.unsplash.com/photo-1477959858617-67f85cf4f1df?auto=format&fit=crop&w=800&q=80"
   },
   {
     name: "Brooklyn Park",
-    image: images.city1
+    image: "https://images.unsplash.com/photo-1460317442991-0ec209397118?auto=format&fit=crop&w=800&q=80"
   }
 ];
 const heroImage = images.hero;

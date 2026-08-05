@@ -3,21 +3,27 @@ function renderEvents(eventList) {
     eventGrid.innerHTML = eventList.map(event => `
         <div class="event-card">
 
-            <img src="${event.image}" alt="${event.title}">
+            <img src="${event.image}" alt="${event.title}" class="event-image">
 
-            <span class="badge">FREE</span>
+            <div class="event-info">
 
-            <h3>${event.title}</h3>
+                <span class="badge">FREE</span>
 
-            <p>${event.date}</p>
+                <h3>${event.title}</h3>
 
-            <p>${event.location}</p>
+                <p>${event.date}</p>
 
-            <small>${event.group}</small>
+                <p>${event.location}</p>
 
-           <button class="join-btn" onclick="location.href='signup.html'">
-    Join Event
-</button>
+                <small>${event.group}</small>
+
+                <button class="join-btn"
+                        onclick="location.href='signup.html'">
+                    Join Event
+                </button>
+
+            </div>
+
         </div>
     `).join("");
 }
@@ -213,3 +219,11 @@ joinButtons.forEach(button => {
         alert("🎉 Welcome to Kulan! Start exploring local events.");
     });
 });
+const menuBtn = document.querySelector(".menu-btn");
+const mobileMenu = document.querySelector(".mobile-menu");
+
+if (menuBtn && mobileMenu) {
+    menuBtn.addEventListener("click", () => {
+        mobileMenu.classList.toggle("show");
+    });
+}
